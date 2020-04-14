@@ -18,10 +18,10 @@ const masc = {
   resultMin: 95
 };
 
-// Monta função que valida aposentadoria para amboas os sexos
+// Monta função que valida aposentadoria para ambos os sexos
 function validaAponsentadoria(sexo) {
 
-  //Logs só pra verificar setudo está retornando como o esperado
+  //Logs só pra verificar se tudo está retornando como o esperado
   console.log(contribuinte);
   console.log(`Tempo minimo de contribuição: ${sexo.contribuicaoMin} anos`);
   console.log(`Resultado minimo: ${sexo.resultMin}`);
@@ -33,9 +33,9 @@ function validaAponsentadoria(sexo) {
 
     // Realiza soma da idade e do tempo de contribuição
     const resultSoma = contribuinte.idade + contribuinte.contribuicao;  
-    console.log(`A soma da sua idade e seu tempo de contribuição é de ${resultSoma} e o mínimo é de ${sexo.resultMin}`);
+    console.log(`A soma da sua idade e tempo de contribuição é de ${resultSoma}, o mínimo necessário é de ${sexo.resultMin}`);
 
-    // Verifica se a pessoa se encaixa no requisito da regra "85/95"
+    // Verifica se o contribuinte se encaixa na regra "85/95"
     if (resultSoma >= sexo.resultMin) {
       console.log(`Parabéns, ${contribuinte.nome}! Você pode se aposentar.`);
     } else {
@@ -44,7 +44,7 @@ function validaAponsentadoria(sexo) {
 
   } else {
 
-    // Identifica o tempo faltante 
+    // Identifica o tempo faltante para atingir a idade mínima
     const tempoFaltante = sexo.contribuicaoMin - contribuinte.contribuicao;
     var textTempoFaltante = "anos"
     // Verifica se o tempo faltante é igual a 1 para exibir texto no singular
