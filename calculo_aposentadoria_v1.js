@@ -1,10 +1,10 @@
-// Armazena os dados da pessoa
+// Armazena os dados do contribuinte
 const nome = "Silvano";
 const sexo = "M";
 const idade = 48;
 const contribuicao = 34;
 
-// Exibe os dados da pessoa
+// Exibe os dados do contribuinte
 console.log(`Dados do contribuinte = Nome: ${nome}, Sexo: ${sexo}, Idade: ${idade}, Contribuição: ${contribuicao} anos`);
 
 // Armazena os requisitos minimos para o sexo feminino
@@ -15,18 +15,18 @@ const resultMinFeminino = 85;
 const contribuicaoMinMasculino = 35;
 const resultMinMasculino = 95;
 
-// Verifica se a pessoa é do sexo feminino
+// Verifica se o contribuinte é do sexo feminino
 if (sexo === "F") {
-  // Pessoa do sexo feminino
+  // contribuinte do sexo feminino
 
-  // Verifica se a pessoa possui o tempo minimo de contribuição
+  // Verifica se o contribuinte possui o tempo minimo de contribuição
   if (contribuicao >= contribuicaoMinFeminino) {
     console.log(`${nome}, você possui o tempo minimo de contribuicao, vamos para a próxima etapa ...`);
 
     // Realiza soma da idade e do tempo de contribuição
     const resultSoma = idade + contribuicao;  
 
-    // Verifica se a pessoa de encaixa no requisito 85 da regra "85/95"
+    // Verifica se o contribuinte se encaixa no requisito 85 da regra "85/95"
     if (resultSoma >= resultMinFeminino) {
       // Exibe feedbak positivo
       console.log(`Parabéns, ${nome}! Você pode se aposentar.`);
@@ -49,16 +49,16 @@ if (sexo === "F") {
   }
 
 } else {
-  // Pessoa do sexo masculino
+  // contribuinte do sexo masculino
 
-  // Verifica se a pessoa possui o tempo minimo de contribuição
+  // Verifica se o contribuinte possui o tempo minimo de contribuição
   if (contribuicao >= contribuicaoMinMasculino) {
     console.log(`${nome}, você possui o tempo minimo de contribuicao, vamos para a próxima etapa ...`);
 
     // Realiza soma da idade e do tempo de contribuição
     const resultSoma = idade + contribuicao;  
 
-    // Verifica se a pessoa de encaixa no requisito 85 da regra "85/95"
+    // Verifica se o contribuinte de encaixa no requisito 85 da regra "85/95"
     if (resultSoma >= resultMinMasculino) {
       // Exibe feedbak positivo
       console.log(`Parabéns, ${nome}! Você pode se aposentar.`);
